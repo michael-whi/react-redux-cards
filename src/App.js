@@ -1,26 +1,37 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+
 import { createStore } from 'redux';
-import { Provider } from 'react-redux'
+import { Provider } from 'react-redux';
+
+import CardView from './views/CardView';
+import { mainReducer } from './reducers'
+
+const initialStore = {
+  cards: [
+    {
+      key: "c1",
+      title: 'Card 1',
+      text: 'This is a text of the first card.',
+      pos: { x: "10px", y: "10px" }
+    },
+    {
+      key: "c2",
+      title: 'Card 2',
+      text: 'This is a text of the first card.',
+      pos: { x: "350px", y: "10px" }
+    }
+  ]
+}
+
+const store = createStore(mainReducer, initialStore)
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Provider store={store}>
+        <CardView />
+      </Provider>
     </div>
   );
 }
