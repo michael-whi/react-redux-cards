@@ -10,16 +10,16 @@ import { mainReducer } from './reducers'
 const initialStore = {
   cards: [
     {
-      key: "c1",
+      key: 'c1',
       title: 'Card 1',
       text: 'This is a text of the first card.',
-      pos: { x: "10px", y: "10px" }
+      pos: { x: '10px', y: '10px' }
     },
     {
-      key: "c2",
+      key: 'c2',
       title: 'Card 2',
       text: 'This is a text of the first card.',
-      pos: { x: "350px", y: "10px" }
+      pos: { x: '350px', y: '90px' }
     }
   ]
 }
@@ -28,7 +28,7 @@ const store = createStore(mainReducer, initialStore)
 
 function App() {
   return (
-    <div className="App">
+    <div className='App'>
       <Provider store={store}>
         <CardView />
       </Provider>

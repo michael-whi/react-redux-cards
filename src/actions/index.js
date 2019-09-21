@@ -1,11 +1,11 @@
-export function savePosition(state) {
-    return { type: SAVE_POS, state };
+export function updatePosition(state) {
+    return { type: 'UPDATE_POS', state };
 }
 
-export function saveText(state) {
-    return { type: SAVE_TEXT, state };
+export function updateText(state) {
+    return { type: 'UPDATE_TEXT', state };
 }
 
-export function saveTitle(state) {
-    return { type: SAVE_TITLE, state };
+export function updateTitle(state) {
+    return { type: 'UPDATE_TITLE', state };
 }
