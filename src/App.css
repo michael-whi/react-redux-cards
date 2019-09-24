@@ -32,6 +32,10 @@
   }
 }
 
+/*
+    BEM CSS DEF
+*/
+
 .card {
   position: inherit;
   /* width: 250px; */
@@ -51,6 +55,7 @@
   font-weight: lighter;
   font-size: 24px;
   user-select: none;
+  resize: none;
 }
 
 .card__grabarea{

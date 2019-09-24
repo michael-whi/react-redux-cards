@@ -9,3 +9,7 @@ export function updateText(state) {
 export function updateTitle(state) {
     return { type: 'UPDATE_TITLE', state };
 }
+
+export function updateSize(state) {
+    return { type: 'UPDATE_TITLE', state };
+}
